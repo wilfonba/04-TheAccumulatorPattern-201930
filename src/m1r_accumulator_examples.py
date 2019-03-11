@@ -36,13 +36,13 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher, Mark Hays,
 #     c. If you want a loop that runs from r to s, inclusive, assuming s >= r,
 #          what expression would you use in the _____ below?
 #
-#            for k in range(r,s + 1):
+#            for k in range((s + 1)-r):
 #
 #     d. If you want a loop that runs from (r + 4) to (s - 10),
 #          including the (r + 4) but not including the (s - 10),
 #          what expression would you use in the _____ below?
 #
-#            for k in range(r + 4, r - 10):
+#            for k in range((r - 10) - (r-4)):
 #
 #     e. The following code snippet attempts to return the number
 #          of integers from r to s, inclusive, whose cosines are positive.
@@ -55,7 +55,8 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher, Mark Hays,
 #                  return count
 #
 #              count = 0
-#              for k in range(r,s + 1):
+#              for k in range((s + 1) - r):
+#                k = k + r
 #                if math.cos(k) > 0:
 #                   count = count + 1
 #              print(count)
