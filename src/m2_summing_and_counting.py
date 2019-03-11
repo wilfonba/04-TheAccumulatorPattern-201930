@@ -226,7 +226,7 @@ def count_sines_from(m, n):
 def run_test_count_sines_vs_cosines():
     """ Tests the   count_sines_vs_cosines   function. """
     # -------------------------------------------------------------------------
-    # TODO: 6. Implement this TEST function.
+    # Done: 6. Implement this TEST function.
     #   It TESTS the  count_sines_vs_cosines  function defined below.
     #   Include at least **   6   ** tests (we wrote one for you).
     #              ** Yes, 6 (six) tests. **
@@ -245,14 +245,38 @@ def run_test_count_sines_vs_cosines():
     print('       actual:  ', answer)
 
     # -------------------------------------------------------------------------
-    # TODO: 6 (continued).
+    # Done: 6 (continued).
     # Below this comment, add 5 more test cases of your own choosing.
     # -------------------------------------------------------------------------
 
     # Test 1:
-    expected = 100
-    answer = count_sines_vs_cosines(37)
-    print('Test 1 expected:', expected)
+    expected = 6
+    answer = count_sines_vs_cosines(6)
+    print('Test 2 expected:', expected)
+    print('       actual:  ', answer)
+
+    # Test 1:
+    expected = 6
+    answer = count_sines_vs_cosines(5)
+    print('Test 3 expected:', expected)
+    print('       actual:  ', answer)
+
+    # Test 1:
+    expected = 5
+    answer = count_sines_vs_cosines(4)
+    print('Test 4 expected:', expected)
+    print('       actual:  ', answer)
+
+    # Test 1:
+    expected = 4
+    answer = count_sines_vs_cosines(3)
+    print('Test 5 expected:', expected)
+    print('       actual:  ', answer)
+
+    # Test 1:
+    expected = 0
+    answer = count_sines_vs_cosines(0)
+    print('Test 6 expected:', expected)
     print('       actual:  ', answer)
 
 
@@ -282,7 +306,7 @@ def count_sines_vs_cosines(m):
       -- Also:  count_sines_vs_cosines(101) returns 100 (trust me!)
     """
     # -------------------------------------------------------------------------
-    # TODO: 7. Implement and test this function.
+    # Done: 7. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     #
     # IMPORTANT: As in previous problems in this session,
@@ -290,6 +314,12 @@ def count_sines_vs_cosines(m):
     #   of the RANGE expression, if you happen to know them.
     # -------------------------------------------------------------------------
 
+    count = 0
+    for k in range(2*m + 1):
+        k = k - m
+        if math.sin(k) > math.cos(k):
+            count = count + 1
+    return count
 
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
